@@ -1,38 +1,206 @@
-.App {
-  text-align: center;
+.navbar {
+  background-color: white;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-item {
+  margin-right: 20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.dropdown,
+.wallet {
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Hero-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 480px;
+}
+.hero-data {
+  flex: 0.4;
+  padding: 3rem;
+  padding-left: 8rem;
+}
+.hero-image {
+  flex: 0.6;
+}
+.hero-image img {
+  width: 100%;
+  height: 100%;
+}
+.hero-data .rating-box {
+  border: 2px solid #e0e0e0;
+  width: max-content;
+  padding: 0.25rem 1rem;
+  border-radius: 8px;
+  margin-right: 8px;
+}
+.hero-data button {
+  padding: 12px 15px;
+  background: linear-gradient(180deg, #6b17ff 0%, #7f11f6 100%);
+  border-radius: 8px;
   color: white;
+  border: none;
+  width: 240px;
+}
+.astrology {
+  padding: 4rem 3rem;
+  /* padding-bottom: 0; */
+  background: #f6f4f8;
+  transition: all ease-in-out 0.3s;
+}
+.astrology .description {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.astrology .description p {
+  transition: all 0.3s ease-in-out;
+}
+.astrology .open-icon {
+  transform: rotate(90deg);
+  transition: all ease-in-out 0.3s;
+}
+.reasons .card {
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  border: none;
+}
+.reasons .card-container {
+  flex-wrap: wrap;
+}
+.satisfaction .purple-line {
+  width: 100%;
+  border: none;
+  border-top: 5px solid #e2c9ff;
+}
+.satisfaction .card-bottom p,
+.satisfaction .card-bottom span {
+  font-size: 16px;
+  line-height: 20px;
+}
+.satisfaction .card-container {
+  flex-wrap: wrap;
+  padding: 0 5rem;
+}
+.satisfaction .card {
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  border: none;
+}
+.satisfaction .card-tags {
+  flex-wrap: wrap;
+}
+.satisfaction .card .card-tags span {
+  color: #b373ff;
+  border: 1px solid #b373ff;
+  padding: 3px 16px;
+  margin-right: 16px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+.working {
+  margin-top: 3rem;
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  background: #f6f4f8;
+}
+.working .working-card {
+  max-width: 312px;
+}
+.working .card-container {
+  flex-wrap: wrap;
+}
+.protect {
+  margin-top: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  background: #f6f4f8;
+}
+.protect .card-container {
+  flex-wrap: wrap;
+  padding: 0 5rem;
+}
+.news {
+  margin-top: 5rem;
+  padding-bottom: 3rem;
+}
+.news .card {
+  min-width: 160px;
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 12px 32px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+}
+.news .card-container {
+  flex-wrap: wrap;
+  padding: 0 5rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 1440px) {
+  .hero-data {
+    padding-left: 3rem;
   }
-  to {
-    transform: rotate(360deg);
+  .consult {
+    padding-inline: 4rem;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .news .card-container {
+    padding: 0 2rem;
+  }
+  .hero-data {
+    padding-left: 2rem;
+    padding-right: 0;
+  }
+  .hero-image {
+    flex: 0.7;
+  }
+  .working {
+    padding-inline: 2rem;
+  }
+  .working-card img {
+    height: 250px;
+    width: 250px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .consult {
+    padding-inline: 1rem;
+  }
+  .Hero-section {
+    flex-direction: column-reverse;
+    margin-bottom: 2rem !important;
+  }
+  .hero-data {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+  }
+  .Hero-section hr{
+    display: none;
+  }
+  .hero-image {
+    display: none;
+  }
+  .hero-ratings {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-ratings .rating-box {
+    margin-bottom: 1rem;
+  }
+  .reasons .card-container card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .satisfaction .card-container {
+    padding: 0 0.5rem;
+  }
+  .reasons .card {
+    margin-inline: 1rem !important;
+  }
+  .protect .card-container{
+    padding: 0 2rem;
   }
 }

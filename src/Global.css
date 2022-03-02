@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  line-height: 20px;
+}
+.btn {
+  min-height: 40px;
+}
+h1 {
+  margin-bottom: 32px;
+}
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 14px !important;
+  }
+  h5 {
+    font-size: 16px;
+    padding-inline: 1rem;
+  }
+  h1 {
+    font-size: 23px;
+    margin-bottom: 10px;
+    padding-inline: 1rem;
+  }
+}
